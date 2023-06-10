@@ -1,27 +1,24 @@
 import React from "react";
 import "./HotelItems.css";
 
-function HotelItem({ HotelID ,Name, Rating,Capacity, Email, Phone, Address, addDelete}){
-    //display data in a card
+function HotelItem({ HotelID, Name, Rating, Capacity, Email, Phone, Address, addDelete }) {
+  function handleDelete(HotelID) {
+    addDelete();
+  }
 
-function handleDelete(HotelID){
-    addDelete(HotelID)
+  return (
+    <div className="card">
+      <p>{HotelID}</p>
+      <h2>{Name}</h2>
+      <p>{Email}</p>
+      <p>{Phone}</p>
+      <p>{Rating}</p>
+      <p>{Capacity}</p>
+      <p>{Address}</p>
+      <button onClick={handleDelete} className="delete-button">Delete Hotel</button>
+      <button className="book-button">Book Hotel</button>
+    </div>
+  );
 }
 
-    return(
-        <div className="card">
-            <p>{HotelID}</p>
-            <h2>{Name}</h2>
-            <p>{Email}</p>
-            <p>{Phone}</p>
-            <p>{Rating}</p>
-            <p>{Capacity}</p>
-            <p>{Address}</p>
-            <button onClick={ () =>handleDelete  (HotelID) }>Delete Button</button>
-         </div>
-        
-    )
-
-}
-
-export default HotelItem
+export default HotelItem;

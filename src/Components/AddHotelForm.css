@@ -1,0 +1,35 @@
+.add-hotel-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.add-hotel-form input[type="text"],
+.add-hotel-form input[type="email"],
+.add-hotel-form input[type="tel"] {
+    width: 300px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-hotel-form button {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-hotel-form button:hover {
+    background-color: #1976d2;
+}
+
+.add-hotel-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2196f3;
+}

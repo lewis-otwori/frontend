@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Components/Navbar';
 import HotelList from './Components/HotelList';
 // import Bookings from './Bookings';
 import HotelItem from './Components/HotelItems';
+import AddHotelForm from './Components/AddHotelForm';
 
 function App() {
   const [data, setData] = useState([]);
@@ -29,9 +31,11 @@ function App() {
 
   return (
     <div>
+      <Navbar/>
       <HotelList data={data} />
       {/* <Bookings/> */}
-      <HotelItem addDelete={hotelDelete}/>
+      <HotelItem addDelete={hotelDelete} />
+      <AddHotelForm/>
     </div>
   );
 }

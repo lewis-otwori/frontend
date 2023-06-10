@@ -1,53 +1,42 @@
-/* CSS for HotelItem component */
-
 .card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card p {
     margin: 0;
     font-size: 14px;
-    /* Decrease the font size for smaller grids */
 }
 
 .card h2 {
     margin: 0;
     font-size: 16px;
-    /* Decrease the font size for smaller grids */
     font-weight: bold;
 }
 
 .card button {
-    background-color: #e53935;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 8px 4px;
+    padding: 8px 16px;
     cursor: pointer;
-    font-size: 12px;
-    /* Decrease the font size for smaller grids */
+    font-size: 14px;
 }
 
-.card button:hover {
-    background-color: #c62828;
+.card button.delete-button {
+    background-color: #e53935;
 }
 
-.card button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #e53935;
-}
-
-/* Grid container to display multiple HotelItem components */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Decrease the minmax value for smaller grids */
-    gap: 16px;
+.card button.book-button {
+    background-color: #2196f3;
 }
